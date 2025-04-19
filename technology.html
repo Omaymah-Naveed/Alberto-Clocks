@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Clocks</title>
+    <link rel="icon" type="image" href="Gallery/Alberto Clocks (1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!-- Icon cdn link -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+             
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lexend+Deca:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,600;1,700;1,800&family=Varela+Round&display=swap');
+
+body 
+{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+   
+      span , p , h3 , h4
+      {
+          color: black;
+      }
+      .carousel-inner  {
+      width: 100%;
+      height: 1000%;
+    }
+      .nav-item::after {
+       content: '';
+       display: block;
+       width: 0px;
+       height: 2px;
+       background: #fec400;
+       transition: 0.4s;
+       
+      
+   }
+   
+   .nav-item:hover::after {
+       width: 100%
+  }
+  .navbar-dark .navbar-nav .active>.nav-link,
+   .navbar-dark .navbar-nav .nav-link.active,
+   .navbar-dark .navbar-nav .nav-link.show,
+   .navbar-dark .navbar-nav .show>.nav-link,
+   .navbar-dark .navbar-nav .nav-link:focus,
+   .navbar-dark .navbar-nav .nav-link:hover {
+       color: #fec400
+   }
+  
+  .nav-link {
+       /* padding: 25px 5px; */
+       transition: 0.2s
+   } 
+   .blurry
+        {
+      position:  fixed;
+      top:0;
+      width: 100%;
+      align-items: center;
+      background: rgba(0,0,0,0.4);
+      justify-content: space-between;
+        }
+        .img1{
+          margin-bottom: -8px;
+          margin-top: -8px;
+          margin-right: -8px;      
+        }
+        .site-footer
+  {
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
+  .site-footer hr
+  {
+    border-top-color:#bbb;
+    opacity:0.5
+  }
+  .site-footer hr.small
+  {
+    margin:20px 0
+  }
+  .site-footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .site-footer a
+  {
+    color:#737373;
+  }
+  .site-footer a:hover
+  {
+    color:#fec400;
+    text-decoration:none;
+  }
+  .footer-links
+  {
+    padding-left:0;
+    list-style:none
+  }
+  .footer-links li
+  {
+    display:block
+  }
+  .footer-links a
+  {
+    color:#737373
+  }
+  .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+  {
+    color:#fec400;
+    text-decoration:none;
+  }
+  .footer-links.inline li
+  {
+    display:inline-block
+  }
+  .social-icons
+  {
+    text-align:right
+  }
+  .site-footer .social-icons a
+  {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+  }
+  .copyright-text
+  {
+    margin:0
+  }
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
+    .site-footer
+    {
+      padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+      text-align:center
+    }
+  }
+  .social-icons
+  {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+  }
+  .social-icons li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus{
+    color:#fff;
+    background-color:#fec400
+  }
+  .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  
+  @media (max-width:767px)
+  {
+    .social-icons li.title
+    {
+      display:block;
+      margin-right:0;
+      font-weight:600
+    }
+  }
+  .hero-text {
+  text-align: center;
+  position: sticky;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: #fec400;
+}
+    </style>
+  </head>
+   
+
+<body>
+   
+
+   <!-- navigation start -->
+
+   <nav class="navbar blurry navbar-expand-lg navbar-dark sticky-top fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="Gallery/Alberto Clocks (1).png" width="90px" class="img1"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link  m-2" aria-current="page" href="index.html" style=" font-size: large;">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle m-2"  style=" font-size: large;" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="vintage.html">Vintage Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="luxary.html" >Luxury Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="smart.html">Smart Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="couple.html">Couple Watches</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active m-2" href="technology.html"  style=" font-size: large;">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="gallery.html"  style=" font-size: large;">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="about.html"  style=" font-size: large;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="contact.html"  style=" font-size: large;">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- NAVIGATION END -->
+
+<!-- CAROUSEL -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="Gallery/techno.jpg" alt="First slide">
+    </div>
+      <!-- TEXT -->
+<div class="hero-text" data-aos="fade-right">
+  <h1>TECHNOLOGY</h1>
+  </div>
+<!-- text -->
+  </div>
+</div>
+<!-- CAROUSEL -->
+
+
+<!-- technology Start -->
+ 
+<section class="my-2">
+  <h1 class="text-center my-4" style="font-family: 'PT Serif', serif; color: #fec400;"> WATCHES</span></h1>
+  <div class="container mt-4 mb-4">
+      <div class="row">
+       <div class="col-lg-9 col-md-8 col-sm-12 mt-3">
+          <p class="fs-5">A watch is a portable timepiece intended to be carried or worn by a person.
+             It is designed to keep a consistent movement despite the motions caused by the person's activities. 
+             A wristwatch is designed to be worn around the wrist, attached by a watch strap or other type of bracelet, including metal bands, leather straps, or any other kind of bracelet. 
+             A pocket watch is designed for a person to carry in a pocket, often attached to a chain .
+             <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Watches were developed in the 17th century from spring-powered clocks, which appeared as early as the 14th century. 
+            During most of its history the watch was a mechanical device, driven by clockwork, powered by winding a mainspring, and keeping time with an oscillating balance wheel. 
+            These are called mechanical watches. 
+            In the 1960s the electronic quartz watch was invented, which was powered by a battery and kept time with a vibrating quartz crystal.
+             By the 1980s the quartz watch had taken over most of the market from the mechanical watch. 
+             Historically, this is called the quartz revolution (also known as quartz crisis in Switzerland).
+              Developments in the 2010s include smart watches, which are elaborate computer-like electronic devices designed to be worn on a wrist. They generally incorporate timekeeping functions, but these are only a small subset of the smartwatch's facilities. </p>
+          </div>   
+          <div class="col-lg-3 col-md-4 col-sm-12 text-center mt-3 mb-4" data-aos="fade-right">
+            <img src="Gallery/watch.jpeg" class="img-fluid ms-1" style="height: 225px; width: 238px;" alt="">
+          </div>
+        </div>
+    </div> 
+</section>
+
+<!-- Watch end -->
+
+<!-- history start -->
+
+<section class="my-2">
+  <h1 class="text-center my-4" style="font-family: 'PT Serif', serif; color: #fec400;"> HISTORY  </span></h1>
+  <div class="container mt-4 mb-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12 text-center mt-3 mb-4" data-aos="fade-right">
+          <img src="Gallery/history.jpg" class="img-fluid  ms-1" style="height: 225px; width: 238px;" alt="">
+        </div>
+       <div class="col-lg-9 col-md-8 col-sm-12 mt-3">
+          <p class="fs-5">The history of watches began in 16th-century Europe, where watches evolved from portable spring-driven clocks, which first appeared in the 15th century.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The watch was developed by inventors and engineers from the 16th century to the mid-20th century as a mechanical device, powered by winding a mainspring which turned gears and then moved the hands; 
+            it kept time with a rotating balance wheel. 
+            In the 1960s the invention of the quartz watch which ran on electricity and kept time with a vibrating quartz crystal, proved a radical departure for the watchmaking industry.
+             During the 1980s quartz watches took over the market from mechanical watches, a process referred to as the "quartz crisis". 
+             Although mechanical watches still sell in the watch market, the vast majority of watches as of 2020 have quartz movements.
+             <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          
+            One account of the origin of the word "watch" suggests that it came from the Old English word woecce which meant "watchman", because town watchmen used watches to keep track of their shifts.
+            [need quotation to verify] Another theory surmises that the term came from 17th-century sailors, who used the new mechanisms to time the length of their shipboard watches (duty shifts).
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The Oxford English Dictionary records the word watch in association with a timepiece from at least as early as 1542</p>
+          </div>   
+         
+        </div>
+    </div> 
+</section>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6 style="color: #fec400;">About</h6>
+          <p class="text-justify" style="color:#818a91">Alberto's Clock & Watch Shop LLC is a company that operates in the Luxury Goods & Jewelry industry. It employs 1-5 people and has $0M-$1M of revenue. The company is headquartered in Fort Lauderdale, Florida</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6 style="color: #fec400;">Categories</h6>
+          <ul class="footer-links">
+            <li><a href="vintage.html" style="text-decoration: none;">Vintage</a></li>
+            <li><a href="luxury.html" style="text-decoration: none;">Luxury Watches</a></li>
+            <li><a href="smart.html" style="text-decoration: none;">Smart Watches</a></li>
+            <li><a href="couple.html" style="text-decoration: none;">Couple Watches</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6 style="color: #fec400;">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="about.html" style="text-decoration: none;">About Us</a></li>
+            <li><a href="contact.html" style="text-decoration: none;">Contact Us</a></li>
+            <li><a href="about.html" style="text-decoration: none;">Team</a></li>
+            <li><a href="contact.html" style="text-decoration: none;">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text" style="color:#818a91">Copyright &copy; 2023 All Rights Reserved by 
+       <a href="#" style="text-decoration: none; color: #fec400;">Alberto Clocks</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a style="color: #fec400;" href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.whatsapp.com/"><i class="bi bi-whatsapp"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<!-- technology end -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, once: true
+  });
+</script>
+
+</body>
+</html>

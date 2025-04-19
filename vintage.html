@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Clocks</title>
+    <link rel="icon" type="image" href="Gallery/Alberto Clocks (1).png">
+
+    <!-- CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Icon cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lexend+Deca:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,600;1,700;1,800&family=Varela+Round&display=swap');
+
+body 
+{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-img-top:hover{
+  transition: all 0.3s;
+  transform: scale(1.15);
+}
+
+ button:hover
+ {
+  border: #26272b;
+  border-radius: 8px;
+  border: solid;
+  box-shadow: none;
+ }
+ .dropdown-item:hover {
+      color: #fec400;
+      position: relative;
+      left: 5px;
+    }
+    .nav-item::after {
+     content: '';
+     display: block;
+     width: 0px;
+     height: 2px;
+     background: #fec400;
+     transition: 0.4s
+ }
+ 
+ .nav-item:hover::after {
+     width: 100%
+}
+.navbar-dark .navbar-nav .active>.nav-link,
+ .navbar-dark .navbar-nav .nav-link.active,
+ .navbar-dark .navbar-nav .nav-link.show,
+ .navbar-dark .navbar-nav .show>.nav-link,
+ .navbar-dark .navbar-nav .nav-link:focus,
+ .navbar-dark .navbar-nav .nav-link:hover {
+     color: #fec400
+ }
+
+.nav-link {
+     /* padding: 25px 5px; */
+     transition: 0.2s
+ } 
+ .blurry
+      {
+    position: fixed;
+    top:0;
+    width: 100%;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    justify-content: space-between;
+      }
+      .img1{
+        margin-bottom: -8px;
+        margin-top: -8px;
+        margin-right: -8px;      
+      }
+      .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#fec400;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#fec400;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus{
+  color:#fff;
+  background-color:#fec400
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+ 
+</style>
+</head>
+<body>
+
+
+
+   <!-- navigation start -->
+
+   <nav class="navbar blurry navbar-expand-lg navbar-dark sticky-top fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="Gallery/Alberto Clocks (1).png" width="90px" class="img1"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link  m-2" aria-current="page" href="index.html" style=" font-size: large;">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active m-2"  style=" font-size: large;" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="vintage.html">Vintage Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="luxary.html" >Luxury Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="smart.html">Smart Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="couple.html">Couple Watches</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="technology.html"  style=" font-size: large;">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="gallery.html"  style=" font-size: large;">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="about.html"  style=" font-size: large;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="contact.html"  style=" font-size: large;">Contact Us</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navigation end -->
+
+<BR><BR><BR><BR><BR>
+
+<!-- HEADING -->
+
+<h1 style="text-align: center; color: #fec400;">VINTAGE WATCHES</h1> 
+ 
+<!-- PARAGRAPH  -->
+
+<center><h4>It tells history not just a time.</h4></center>
+
+<!-- cards -->
+
+<div class="container ">
+<div class="row gy-3 my-3">
+ <!-- First Card -->
+ <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="card" >
+      <img src="images/r9.png" height="300px" width="300px" class="card-img-top" alt="..." data-aos="zoom-in">
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">Bulova Sutton Gold</h5>
+        <p class="card-text" style="text-align: center;">Time Is Storm.!</p>
+ <center><button  type="button"  class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#exampleModal" 
+ data-name="Bulova Sutton Gold" data-price="189$ " data-desc="Time Is Storm.!" 
+ data-img="images/r9.png" onclick="clock(this)">Quick View</button></center>
+</div>
+</div>
+</div>
+    <!-- Second Card -->
+<div class="col-sm-6 col-md-4 col-lg-4">
+<div class="card" >
+<img src="Image/u7.jpg" height="300px" width="300px" class="card-img-top" alt="..." data-aos="zoom-in">
+<div class="card-body">
+  <h5 class="card-title" style="text-align: center;"> CITIZEN Corso AW123</h5>
+  <p class="card-text" style="text-align: center;">Deal with it!</p>
+<center><button  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
+ data-name="CITIZEN Corso AW123" data-price="155$ " data-desc="Deal with it!" 
+ data-img="Image/u7.jpg" onclick="clock(this)">Quick View</button></center>
+</div>
+</div>
+</div>
+  <!-- Third Card -->
+<div class="col-sm-6 col-md-4 col-lg-4 ">
+<div class="card" >
+<img src="Image/u10.jpeg" height="300px" width="300px" class="card-img-top" alt="..." data-aos="zoom-in">
+<div class="card-body">
+  <h5 class="card-title"  style="text-align: center;"> Bulova Classic Automatic</h5>
+  <p class="card-text"  style="text-align: center;">Lost Time will never found Again.!</p>
+<center><button  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
+ data-name=" Bulova Classic Automatic" data-price="132$ " data-desc="Lost Time will never found Again" 
+ data-img="Image/u10.jpeg" onclick="clock(this)">Quick View</button></center>
+</div>
+</div>
+</div>
+
+  <!-- fourth Card -->
+  <div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="card" >
+        <img src="Image/u11.jpg" height="300px" width="300px" class="card-img-top" alt="..."  data-aos="zoom-in">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Bulova Marine Star 0S20</h5>
+          <p class="card-text" style="text-align: center;">Marine Star Men's Black</p>
+        <center> <button  type="button" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#exampleModal"
+         data-name="Bulova Marine Star 0S20" data-price="89$ " data-desc="Marine Star Men's Black "
+         data-img="Image/u11.jpg" onclick="clock(this)">Quick View</button></center>
+        </div>
+      </div>
+</div>
+
+
+          <!-- fivth Card -->
+<div class="col-sm-6 col-md-4 col-lg-4">
+<div class="card" >
+<img src="images/b4.jpg" height="300px" width="350px" class="card-img-top" alt="..." data-aos="zoom-in">
+<div class="card-body">
+<h5 class="card-title" style="text-align: center;">Bulova Marine Star 98A22</h5>
+<p class="card-text"  style="text-align: center;">Wear it like no one can.!</p>
+<center> <button  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
+data-name="Bulova Marine Star 98A22" data-price="85$ " data-desc="Wear it like no one can" 
+data-img="images/b4.jpg" onclick="clock(this)">Quick View</button></center>
+</div>
+</div>
+</div>
+
+<!-- sixth Card -->
+<div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="card" >
+      <img src="images/c34.jpeg" height="300px" width="350px" class="card-img-top" alt="..." data-aos="zoom-in">
+      <div class="card-body">
+        <h5 class="card-title"  style="text-align: center;">CITIZEN Men NJ0147-18X</h5>
+        <p class="card-text"  style="text-align: center;">Watch is my style.!</p>
+      <center><button  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
+       data-name="CITIZEN Men NJ0147-18X" data-price="49$ " data-desc="Watch is my style.!" 
+       data-img="images/c34.jpeg" onclick="clock(this)">Quick View</button></center>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title text-warning" id="exampleModalLabel">VINTAGE WATCHES</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+
+<div class="table-responsive">
+<table class="table align-middle">
+<thead>
+<tr>
+   <th>Name</th>
+   <th>Price</th>
+   <th>Description</th>
+   <th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td id="1"></td>
+ <td id="2"></td>
+ <td id="3"></td>
+ <td><img id="4" width="120px" height="120px"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL END -->
+<script>
+
+function clock(item)
+{
+var name = item.getAttribute('data-name');
+document.getElementById('1').innerHTML = name;
+
+var price = item.getAttribute('data-price');
+document.getElementById('2').innerHTML = price;
+
+var desc = item.getAttribute('data-desc');
+document.getElementById('3').innerHTML = desc;
+
+var img = item.getAttribute('data-img');
+document.getElementById('4').src = img;
+}
+</script>
+<!-- CDN AOS -->  
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+ <script>
+  AOS.init(
+  {
+    duration: 2000, once:true
+  }
+    
+  );
+</script>
+<BR><BR>
+ <!-- Site footer -->
+ <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6 style="color: #fec400;">About</h6>
+        <p class="text-justify">Alberto's Clock & Watch Shop LLC is a company that operates in the Luxury Goods & Jewelry industry. It employs 1-5 people and has $0M-$1M of revenue. The company is headquartered in Fort Lauderdale, Florida</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6 style="color: #fec400;">Categories</h6>
+        <ul class="footer-links">
+          <li><a href="vintage.html" style="text-decoration: none;">Vintage</a></li>
+          <li><a href="luxury.html" style="text-decoration: none;">Luxury Watches</a></li>
+          <li><a href="smart.html" style="text-decoration: none;">Smart Watches</a></li>
+          <li><a href="couple.html" style="text-decoration: none;">Couple Watches</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6 style="color: #fec400;">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="about.html" style="text-decoration: none;">About Us</a></li>
+          <li><a href="contact.html" style="text-decoration: none;">Contact Us</a></li>
+          <li><a href="about.html" style="text-decoration: none;">Team</a></li>
+          <li><a href="contact.html" style="text-decoration: none;">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+     <a href="#" style="text-decoration: none; color: #fec400;">Alberto Clocks</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+              <li><a style="color: #fec400;" href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.whatsapp.com/"><i class="bi bi-whatsapp"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>   
+             
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER END -->
+
+</body>
+</html>

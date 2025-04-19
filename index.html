@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Clocks</title>
+    <link rel="icon" type="image" href="Gallery/Alberto Clocks (1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!-- Icon cdn link -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lexend+Deca:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,600;1,700;1,800&family=Varela+Round&display=swap');
+
+        body 
+        {
+            font-family: 'Anton', sans-serif;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Varela Round', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+        }
+  
+  .nav-item::after 
+  {
+     content: '';
+     display: block;
+     width: 0px;
+     height: 2px;
+     background: #fec400;
+     transition: 0.4s
+ }
+ 
+ .nav-item:hover::after 
+ {
+     width: 100%
+}
+.navbar-dark .navbar-nav .active>.nav-link,
+ .navbar-dark .navbar-nav .nav-link.active,
+ .navbar-dark .navbar-nav .nav-link.show,
+ .navbar-dark .navbar-nav .show>.nav-link,
+ .navbar-dark .navbar-nav .nav-link:focus,
+ .navbar-dark .navbar-nav .nav-link:hover
+{
+     color: #fec400
+ }
+
+.nav-link {
+     /* padding: 25px 5px; */
+     transition: 0.2s
+ } 
+ .card {
+      border: none !important;
+    }
+    .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#fec400;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#fec400;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.social-icons
+{
+  text-align:right;
+  color:#fec400
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus{
+  color:#fff;
+  background-color:#fec400
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+.blurry
+      {
+    position: fixed;
+    top:0;
+    width: 100%;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    justify-content: space-between;
+      }
+      .img1{
+        margin-bottom: -8px;
+        margin-top: -8px;
+        margin-right: -8px;      
+      }
+      .cards-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-thumb > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+
+.cards-thumb > a:hover {
+  transform: scale(1.2);
+}
+
+.cards-text-info {
+  background: var(--section-bg-color);
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.related-cards .cards-text-info {
+  background: var(--white-color);
+}
+
+.cards-text-info-large {
+  background: linear-gradient(to top, var(--dark-color), transparent 90%);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.cards-text-info-large .cards-title-link {
+  color: var(--white-color);
+}
+
+.cards-title-link {
+  color: var(--news-title-color);
+  text-decoration: none;
+}
+.cards-title-link:hover {
+  color: #fec400;
+}
+
+.cards-image {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.cards-image:hover {
+  transform: scale(1.2);
+}
+
+.category-tag,
+.menu-tag {
+  background: var(--dark-color);
+  border-radius: var(--border-radius-default);
+  color: var(--white-color);
+  font-size: var(--category-font-size);
+  display: inline-block;
+  padding: 4px 12px;
+}
+
+.category-tag {
+  margin-bottom: 5px;
+}
+
+
+ </style>
+</head>
+<body>
+
+
+<!-- NAVIGATION -->
+  <nav class="navbar blurry navbar-expand-lg navbar-dark sticky-top fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="Gallery/Alberto Clocks (1).png" width="90px" class="img1"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active m-2" aria-current="page" href="index.html" style=" font-size: large;">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  m-2"  style=" font-size: large;" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="vintage.html">Vintage Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="luxary.html" >Luxury Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="smart.html">Smart Watches</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="couple.html">Couple Watches</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="technology.html"  style=" font-size: large;">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="gallery.html"  style=" font-size: large;">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="about.html"  style=" font-size: large;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  m-2" href="contact.html"  style=" font-size: large;">Contact Us</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+
+<!-- IMAGE -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Gallery/rado c2.jpg" class="d-block w-100 img1" alt="..."> </div></div></div>
+ 
+<!-- IMAGE -->
+<BR>
+  
+<div class="col-12">
+  <h2 class="text-center mb-lg-2 mb-4 text-warning fs-1">Choose Alberto Clocks</h2>
+ <p class="text-center fw-bold">Alberto Clocks goes beyond watchmaking and extends these values to our happy customers.</p>
+ </div>
+<div class="container mt-5 shadow border">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-warning text-center fw-bold text-decoration-underline">30 days Returns</h5>
+          <p class="card-text text-center">Should you change your mind, need your item altered or find a fault, we offer returns within 30 days.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-warning text-center fw-bold text-decoration-underline">Fully insured shipping</h5>
+          <p class="card-text text-center">For your peace of mind, all our items are fully insured when they get shipped. Packages are shipped via trusted couriers..</p>
+
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-warning text-center fw-bold text-decoration-underline">Swiss Quality</h5>
+          <p class="card-text text-center">With Swiss and European parts and materials, the majority of our watches come fitted with Swiss Quartz Movement.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<BR><BR><BR>
+  <section class="cards section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <h2 class="mb-lg-5 mb-4 text-warning text-center fs-1 fw-bold">Featured Photos</h2>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="cards-thumb mb-2">
+               
+                        <img src="vintage/couple.jpeg" alt="">
+               
+                    <br>
+                    
+                    <h5 class="cards-title mt-2">
+                    <p class="cards-title-link text-center me-5"> Couple Watches</p>
+                  </h5>
+                  <center><strong>Rs: 50,000</strong></center>
+                    <div class="cards-text-info">
+                      <center><button type="button" class="btn btn-warning "><a href="couple.html" style="text-decoration:none; color: #26272b;">See More</a></button></center>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="cards-thumb mb-2">
+              
+                      <img src="vintage/vitage.jpeg"  alt="">
+            
+                  <br>
+                  <h5 class="cards-title mt-2">
+                    <center><p class="cards-title-link"> Vintage Watches</p></center>
+                  </h5>
+                  <center><strong>Rs: 40,000</strong></center>
+                    <div class="cards-text-info">
+                      <center><button type="button" class="btn btn-warning "><a href="vintage.html" style="text-decoration:none; color: #26272b;">See More</a></button></center>
+                  </div>
+              </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="cards-thumb mb-2">
+                    <img src="vintage/luxury.jpeg" alt="">
+                <br>
+                <h5 class="cards-title mt-2">
+                  <center><p class="cards-title-link"> Luxury Watches</p></center>
+                </h5>
+                <center><strong>Rs: 60,000</strong></center>
+                  <div class="cards-text-info">
+                    <center><button type="button" class="btn btn-warning "><a href="luxary.HTML" style="text-decoration:none; color: #26272b;">See More</a></button></center>
+                </div>
+            </div> 
+        </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="cards-thumb mb-2">
+             
+                    <img src="vintage/smart24.jpg"  alt="">
+             
+                <br>
+                <h5 class="cards-title mt-2">
+                  <center><p class="cards-title-link"> Smart Watches</p></center>
+                </h5>
+                <center><strong>Rs: 70,000</strong></center>
+                  <div class="cards-text-info">
+                    <center><button type="button" class="btn btn-warning "><a href="smart.html" style="text-decoration:none; color: #26272b;">See More</a></button></center>
+                </div>
+            </div> 
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+      <div class="container p-4 pb-0 mt-5">
+        <form action="">
+          <!--Grid row-->
+          <div class="row justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto mb-4 mb-md-0">
+              <p class="pt-2">
+                <strong>BE THE FIRST TO KNOW SIGN UP</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-md-5 col-12 mb-4 mb-md-0">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form5Example25" class="form-control" placeholder="Email Address" />
+      
+              </div>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-auto mb-4 mb-md-0">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-warning mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </div>
+      <!-- Grid container -->
+      
+      <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6 style="color: #fec400;">About</h6>
+            <p class="text-justify">Alberto's Clock & Watch Shop LLC is a company that operates in the Luxury Goods & Jewelry industry. It employs 1-5 people and has $0M-$1M of revenue. The company is headquartered in Fort Lauderdale, Florida</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="color: #fec400;">Categories</h6>
+            <ul class="footer-links">
+              <li><a href="vintage.html" style="text-decoration: none;">Vintage</a></li>
+              <li><a href="luxury.html" style="text-decoration: none;">Luxury Watches</a></li>
+              <li><a href="smart.html" style="text-decoration: none;">Smart Watches</a></li>
+              <li><a href="couple.html" style="text-decoration: none;">Couple Watches</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="color: #fec400;">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="about.html" style="text-decoration: none;">About Us</a></li>
+              <li><a href="contact.html" style="text-decoration: none;">Contact Us</a></li>
+              <li><a href="about.html" style="text-decoration: none;">Team</a></li>
+              <li><a href="contact.html" style="text-decoration: none;">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+         <a href="#" style="text-decoration: none; color: #fec400;">Alberto Clocks</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a style="color: #fec400;" href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.whatsapp.com/"><i class="bi bi-whatsapp"></i></a></li>
+              <li><a style="color: #fec400;" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
